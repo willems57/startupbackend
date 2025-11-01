@@ -1,0 +1,379 @@
+<div class="hero-scene text-center text-white">
+        <div class="hero-scene-content">
+            <h1>Utilisateur</h1>
+        </div>
+    </div>
+
+              <div class="mb-3"></div>
+              <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="secondary">  
+                <div class="container-fluid">
+                    
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                          </button>                          
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                  <li class="nav-item">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trajetModal">Nouveaux trajet</button>
+                                  </li>
+            
+                                  <li class="nav-item">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vehiculeModal">Nouveaux vehicule</button>
+                                  </li>
+
+                                </ul>
+                              </div>
+                            </div>
+                          </nav>
+
+
+
+                          <div class="mb-3"></div>
+              <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="secondary">  
+                <div class="container-fluid">
+                    
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                          </button>                          
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                  <li class="nav-item">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DeletetrajetModal">Supprimer un trajet</button>
+                                  </li>
+            
+                                  <li class="nav-item">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DeletevehiculeModal">Supprimer un vehicule</button>
+                                  </li>
+
+                                </ul>
+                              </div>
+                            </div>
+                          </nav>
+
+
+          <div class="mb-3"></div>
+          <div class="container">
+              <div class="text-center">
+                  <!--<button data-show="admin" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#servicesModal">Ajouter un services</button>-->
+              </div>
+          
+              <div class="row row-cols-2 row-cols-lg-3" id="alltrajetImages">
+          
+              
+              </div>
+          
+              </div>
+          </div>
+          
+          
+            <!-- 2 Modal pour l'edition de trajet-->
+            <div class="modal fade" id="trajetModal" tabindex="-1" aria-labelledby="trajetModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="trajetModalLabel">Edition du trajet</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <!--formulaire de dans la modal-->
+                  <div class="modal-body">
+                      <form id="ajtfromtrajet">
+                          <div class="mb-3">
+                            <label for="departInput" class="form-label">Depart</label>
+                            <input type="text" class="form-control" id="departInput" name="depart"> 
+                          </div>
+          
+                          <div class="mb-3">
+                            <label for="arriveInput" class="form-label">Arrive</label>
+                            <input type="text" class="form-control" id="arriveInput" name="arrive"> 
+                          </div>
+              
+                          <div class="mb-3">
+                            <label for="datedInput" class="form-label">Date et heure de depart</label>
+                            <input type="datetime" class="form-control" id="datedInput" name="dated">
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="dureeInput" class="form-label">Duree (en heures)</label>
+                            <input type="number" class="form-control" id="dureeInput" name="duree">
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="voitureInput" class="form-label">Imatriculation</label>
+                            <input type="" class="form-control" id="voitureInput" name="voiture">
+                          </div>
+
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Nouvelle voiture
+                            </a>
+                            <ul class="dropdown-menu">
+                              <div class="container p-3">
+                                <form id="ajtfromvehicule">
+                          
+                                  <!-- Immatriculation -->
+                                  <div class="mb-3">
+                                    <label for="voitureInput" class="form-label">Nouvelle immatriculation</label>
+                                    <input type="text" class="form-control" id="voitureInput" name="voiture" placeholder="Ex : AB-123-CD" required>
+                                  </div>
+                          
+                                  <!-- Marque -->
+                                  <div class="mb-3">
+                                    <label for="marqueInput" class="form-label">Marque</label>
+                                    <input type="text" class="form-control" id="marqueInput" name="marque" placeholder="Ex : Renault" required>
+                                  </div>
+                          
+                                  <!-- Modèle -->
+                                  <div class="mb-3">
+                                    <label for="modeleInput" class="form-label">Modèle</label>
+                                    <input type="text" class="form-control" id="modeleInput" name="modele" placeholder="Ex : Clio" required>
+                                  </div>
+                          
+                                  <!-- Couleur -->
+                                  <div class="mb-3">
+                                    <label for="couleurvInput" class="form-label">Couleur</label>
+                                    <input type="color" class="form-control form-control-color" id="couleurvInput" name="couleurv" title="Choisir une couleur">
+                                  </div>
+                          
+                                  <!-- Photo -->
+                                  <div class="mb-3">
+                                    <label for="imagevInput" class="form-label">Photo</label>
+                                    <input type="file" class="form-control" id="imagevInput" name="imagev" accept="image/*">
+                                  </div>
+                          
+                                  <!-- Nombre de places -->
+                                  <div class="mb-3">
+                                    <label for="placesInput" class="form-label">Nombre de places</label>
+                                    <input type="number" class="form-control" id="placesInput" name="places" min="1" max="5" placeholder="Ex : 5" required>
+                                  </div>
+                          
+                                  <!-- Bouton d'envoi -->
+                                  <div class="text-center">
+                                    <button type="button" class="btn btn-primary" id="btnvehiculeajtmodal">Ajouter la voiture</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </ul>
+                          </li>
+                          
+
+                        <div class="mb-3">
+                          <label for="prixInput" class="form-label">Prix (Credits)</label>
+                          <input type="number" class="form-control" id="prixInput" name="prix">
+                        </div>
+              
+                          <div class="text-center">
+                              <button type="button" class="btn btn-primary" id="btntrajetajtmodal">Enregistrer</button>
+                          </div>
+                      </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          
+            <!-- Modal pour suppression de trajet-->
+            <div class="modal fade" id="DeletetrajetModal" tabindex="-1" aria-labelledby="DeletetrajetModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="DeletetrajetModalLabel"> Etes-vous sur de vouloir annuler</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <!--formulaire dans la modal-->
+                  <div class="modal-body">
+                          <form id="suppfromtrajet">
+                              <div class="mb-3">
+                                <label for="departInput" class="form-label">Depart</label>
+                                <input type="text" class="form-control" id="departInput" name="depart"> 
+                              </div>
+
+                              <div class="mb-3">
+                                <label for="datedInput" class="form-label">Date et heures</label>
+                                <input type="datetime" class="form-control" id="datedInput" name="dated"> 
+                              </div>
+              
+                          <div class="text-center">
+                              <button type="button" class="btn btn-danger" id="btntrajetsupp">Supprimer</button>
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                          </div>
+                      </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3"></div>
+            <div class="container">
+              <div class="text-center">
+                  <!--<button data-show="admin" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DeleteservicesModal">Supprimer un services</button>-->
+              </div>
+            
+              <div class="row row-cols-2 row-cols-lg-3" id="alltrajetImages">
+            
+              </div>
+            
+              </div>
+            </div>
+
+
+
+
+            
+    <div class="mb-3"></div>
+    <div class="container">
+        <div class="text-center">
+           <!-- <button data-show="admin" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enclosModal">Nouvelle enclos</button>-->
+        </div>
+      
+        <div class="row row-cols-2 row-cols-lg-3" id="allvehiculeImages">
+      
+        </div>
+      
+        </div>
+      </div>
+      
+      <!-- 3Modal pour l'edition de vehicule-->
+      <div class="modal fade" id="vehiculeModal" tabindex="-1" aria-labelledby="vehiculeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="vehiculeModalLabel">Nouveaux vehicule</h2>
+              <button data-show="admin" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!--formulaire de dans la modal-->
+            <div class="modal-body">
+                <form id="ajtfromvehicule">
+
+                  <div class="mb-3">
+                    <label for="voitureInput" class="form-label">Imatriculation</label>
+                    <input type="text" class="form-control" id="voitureInput" name="voiture"> 
+                </div>
+
+                <div class="mb-3">
+                  <label for="dateiInput" class="form-label">Date de la premiere imatriculation</label>
+                  <input type="date" class="form-control" id="dateiInput" name="datei"> 
+              </div>
+
+                    <div class="mb-3">
+                        <label for="marqueInput" class="form-label">marque</label>
+                        <input type="text" class="form-control" id="marqueInput" name="marque"> 
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="modeleInput" class="form-label">Modele</label>
+                        <input type="text" class="form-control" id="modeleInput" name="modele"> 
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="couleurvInput" class="form-label">Couleur</label>
+                        <input type="color" class="form-control" id="couleurvInput" name="couleur"> 
+                    </div>
+
+                    <!-- Nombre de places -->
+                    <div class="mb-3">
+                      <label for="placesInput" class="form-label">Nombre de places</label>
+                      <input type="number" class="form-control" id="placesInput" name="places" min="1" max="5" placeholder="Ex : 5" required>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="fumeurInput" class="form-label">Fumeur</label>
+                      <input type="text" class="form-control" id="fumeurInput" name="fumeur"> 
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="annimauxInput" class="form-label">Animaux a bord?</label>
+                    <input type="text" class="form-control" id="annimauxInput" name="annimaux"> 
+                </div>
+        
+                    <div class="mb-3">
+                        <label for="imagevInput" class="form-label">Photo</label>
+                        <input disabled type="file" class="form-control" id="imagevInput" name="imagev"> 
+                    </div>
+                   
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary" id="btnvehiculeajtmodal">Enregister</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- Modal pour suppression de vehicule-->
+      <div class="modal fade" id="DeletevehiculeModal" tabindex="-1" aria-labelledby="DeletevehiculeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="DeletevehiculeModalLabel"> Etes-vous sur de vouloir supprimer</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!--formulaire dans la modal-->
+            <div class="modal-body">
+                <form id="suppfromvehicule">
+                  <div class="mb-3">
+                    <label for="voitureInpuy" class="form-label">Imatriculation</label>
+                    <input type="string" class="form-control" id="voitureInput" name="voiture"> 
+                  </div>
+          
+                      <div class="text-center">
+                          <button type="button" class="btn btn-danger" id="btnvehiculesupp">Supprimer</button>
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                      </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mb-3"></div>
+      <div class="container">
+        <div class="text-center">
+           <!-- <button data-show="admin" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DeleteenclosModal">Supprimer un enclos</button>-->
+        </div>
+      
+        <div class="row row-cols-2 row-cols-lg-3" id="allvehiculeImages">
+        
+        </div>
+      
+        </div>
+      </div>
+
+
+
+
+
+      <!--message de validation-->
+
+      
+      <!-- Modal pour suppression de vehicule-->
+      <div class="modal fade" id="validationModal" tabindex="-1" aria-labelledby="validationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="validationModalLabel"> Etes-vous sur de vouloir etre debiter de ce montant</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!--formulaire dans la modal-->
+            <div class="modal-body">
+                <form id="fromvalidation">
+          
+                      <div class="text-center">
+                          <button type="button" class="btn btn-danger" id="btnvalidation">Valider</button>
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                      </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mb-3"></div>
+      <div class="container">
+        <div class="text-center">
+           <button data-show="admin" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#validationModal">Enregister</button>
+        </div>
+        <div class="row row-cols-2 row-cols-lg-3" id="validation">
+        </div>
+        </div>
+      </div>

@@ -1,0 +1,61 @@
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+        <h1>Suspention de compte</h1>
+    </div>
+</div>
+
+<div class="container">
+    <form id="formulaireInscription">
+        <!-- Champ masqué pour stocker l'ID utilisateur -->
+        <input type="hidden" id="UserIdInput" name="UserId">
+
+        <!-- Champ Nom -->
+        <div class="mb-3">
+            <label for="NomInput" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="NomInput" placeholder="Votre nom" name="Nom">
+            <div class="invalid-feedback">
+                Le nom est obligatoire!
+            </div>
+        </div>
+
+        <!-- Champ Prénom -->
+        <div class="mb-3">
+            <label for="PrenomInput" class="form-label">Prénom</label>
+            <input type="text" class="form-control" id="PrenomInput" placeholder="Votre prénom" name="Prenom">
+            <div class="invalid-feedback">
+                Le prénom est obligatoire!
+            </div>
+        </div>
+
+        <!-- Champ Rôle (pré-rempli et désactivé) -->
+        <div class="mb-3">
+            <label for="RoleInput" class="form-label">Titre</label>
+            <input disabled type="text" class="form-control" id="RoleInput" placeholder="Votre rôle" name="Role" value="suspendu">
+            <div class="invalid-feedback">
+                Le rôle est obligatoire!
+            </div>
+        </div>
+
+        <!-- Champ Email -->
+        <div class="mb-3">
+            <label for="EmailInput" class="form-label">Email</label>
+            <input type="email" class="form-control" id="EmailInput" placeholder="test@mail.fr" name="Email">
+            <div class="invalid-feedback">
+                Email invalide!
+            </div>
+            <div class="valid-feedback">
+                Email valide!
+            </div>
+        </div>
+
+        <!-- Bouton de validation -->
+        <div class="text-center">
+            <button type="button" class="btn btn-primary" id="btn-validation-modification" disabled>Modifier</button>
+        </div>
+    </form>
+
+    <!-- Lien pour rediriger vers la page de connexion -->
+    <div class="text-center pt-3">
+        <a href="/admin">retour vers la page admin!</a>
+    </div>
+</div>

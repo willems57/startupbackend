@@ -1,0 +1,14 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+# Route pour la page 404
+app_404:
+    path: /{any}
+    requirements:
+        any: .*
+    controller: App\Controller\HomeController::notFound
+    defaults:
+        any: null

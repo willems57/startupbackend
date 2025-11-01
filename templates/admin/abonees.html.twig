@@ -1,0 +1,39 @@
+<div class="hero-scene text-center text-white">
+  <div class="hero-scene-content">
+      <h1>Abonnées</h1>
+      <form id="searchForm" class="d-flex" role="search">
+          <input class="form-control me-2" type="text" placeholder="Nom" id="NomInput">
+          <input class="form-control me-2" type="text" placeholder="Prénom" id="PrenomInput">
+          <input class="form-control me-2" type="email" placeholder="Email" id="EmailInput">
+          <input class="form-control me-2" type="text" placeholder="Rôle" id="RoleInput">
+          <button class="btn btn-outline-success" type="button" id="btnSigninA">Rechercher</button>
+      </form>
+      <div id="resultContainer"></div>
+  </div>
+</div>
+
+
+<!-- Modale pour modifier les rôles -->
+<div class="modal fade" id="roleModal" tabindex="-1" aria-labelledby="roleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="roleModalLabel">Modifier les rôles</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="roleForm">
+          <input type="hidden" id="userId" />
+          <div class="mb-3">
+            <label for="roleInputModal" class="form-label">Rôles (séparés par des virgules)</label>
+            <input type="text" class="form-control" id="roleInputModal" placeholder="Exemple : ROLE_USER, ROLE_ADMIN" />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        <button type="button" class="btn btn-primary" id="saveRolesButton">Enregistrer</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="hero-scene text-center text-marron">
+    <div class="hero-scene-content">
+        <h1>Avis</h1>
+    </div>
+</div>
+
+<div class="container">
+  <div class="text-center">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#avisModal" data-show="connected">Ajouter un commentair</button>
+  </div>
+
+  <div class="row row-cols-2 row-cols-lg-3" id="allavisImages">
+
+  
+  </div>
+
+  </div>
+</div>
+
+
+<!-- Modal pour l'edition de photo-->
+<div class="modal fade" id="avisModal" tabindex="-1" aria-labelledby="avisModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="avisModalLabel">Donner un avis</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!--formulaire de dans la modal-->
+      <div class="modal-body">
+          <form id="avisformajt">
+
+            <div class="mb-3">
+              <label for="dateavisInput" class="form-label">Date</label>
+              <input type="datetime-local" class="form-control" id="dateavisInput"> 
+            </div>
+
+              <div class="mb-3">
+                <label for="pseudoInput" class="form-label">Votre nom</label>
+                <input type="text" class="form-control" id="pseudoInput" name="pseudo"> 
+              </div>
+
+              <div class="mb-3">
+                <label for="NomInput" class="form-label">Conducteur</label>
+                <input type="text" class="form-control" id="NomInput" name="Nom"> 
+              </div>
+
+              <div class="mb-3">
+                <label for="commanteairavisInput" class="form-label">Commantaire</label>
+                <input type="text" class="form-control" id="commantaireavisInput" name="Commantaireavis"> 
+              </div>
+  
+              <div class="text-center">
+                  <button type="button" class="btn btn-primary" id="btnavisajt">Enregistrer</button>
+              </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>

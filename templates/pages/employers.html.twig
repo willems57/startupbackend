@@ -1,0 +1,82 @@
+<div class="hero-scene text-center text-white">
+        <div class="hero-scene-content">
+            <h1>Employers</h1>
+        </div>
+    </div>
+
+    <div class="text-center">
+    <div class="mb-3">
+      <button type="button" class="btn btn-primary" id="btnvoirelesavis">les avis</button>
+  </div>
+ 
+  <div class="mb-3">
+    <button type="button" class="btn btn-primary" id="btnmessage">Les messages</button>
+</div>
+</div>
+
+
+
+
+
+
+<div class="mb-3"></div>
+<div class="container">
+    <div class="text-center">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#messageModal" >Repondre</button>
+    </div>
+  
+    <div class="row row-cols-2 row-cols-lg-3" id="allavisImages">
+  
+    
+    </div>
+  
+    </div>
+  </div>
+  
+  
+  <!-- Modal pour l'edition de photo-->
+  <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="messageModalLabel">Donner une reponse</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!--formulaire de dans la modal-->
+        <div class="modal-body">
+            <form id="messageformajt">
+  
+              <div class="mb-3">
+                <label for="datemessageInput" class="form-label">Date</label>
+                <input type="datetime-local" class="form-control" id="datemessageInput"> 
+              </div>
+  
+                <div class="mb-3">
+                  <label for="expediteurInput" class="form-label">Expediteur</label>
+                  <input type="email" disabled class="form-control" id="expediteurInput" name="expediteur" value="ecoride@ecoeco.fr"> 
+                </div>
+  
+                <div class="mb-3">
+                  <label for="EmailInput" class="form-label">Destinateur</label>
+                  <input type="email" class="form-control" id="EmailInput" name="Destinataire" 
+                </div>
+
+                <div class="mb-3">
+                    <label for="sujetInput" class="form-label">Sujet</label>
+                    <input type="text" class="form-control" id="sujetInput" name="sujet"> 
+                  </div>
+  
+                <div class="mb-3">
+                  <label for="messageInput" class="form-label">Message</label>
+                  <input type="text" class="form-control" id="messageInput" name="message"> 
+                </div>
+    
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary" id="btnmessageajt">Envoyer</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

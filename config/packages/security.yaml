@@ -1,0 +1,47 @@
+# config/packages/security.yaml
+security:
+    password_hashers:
+        Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
+        App\Entity\User: 'auto'
+    
+    providers:
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: email
+    
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        
+        # Documentation API
+        api_doc:
+            pattern: ^/api/doc
+            security: false
+        
+        # API principale - authentification par token simple
+        api:
+            pattern: ^/api
+            stateless: true
+            custom_authenticators:
+                - App\Security\SimpleTokenAuthenticator
+        
+        main:
+            lazy: true
+            provider: app_user_provider
+
+    access_control:
+        # Routes publiques
+        - { path: ^/api/public, roles: PUBLIC_ACCESS }
+        - { path: ^/api/login, roles: PUBLIC_ACCESS }
+        - { path: ^/api/registration, roles: PUBLIC_ACCESS }
+        - { path: ^/api/doc, roles: PUBLIC_ACCESS }
+        - { path: ^/api/avis$, methods: [GET], roles: PUBLIC_ACCESS }
+        - { path: ^/api/avisvalidation$, methods: [GET], roles: PUBLIC_ACCESS }
+        
+        # Routes protégées
+        - { path: ^/api/account, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/api/roles, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/api/users, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
