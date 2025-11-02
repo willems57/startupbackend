@@ -1,3 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
 <div class="hero-scene text-center text-marron">
     <div class="hero-scene-content">
         <h1>Avis</h1>
@@ -58,3 +62,9 @@
     </div>
   </div>
 </div>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/avis.js') }}"></script>
+{% endblock %}

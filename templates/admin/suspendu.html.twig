@@ -1,3 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
 <div class="hero-scene text-center text-white">
     <div class="hero-scene-content">
         <h1>Suspention de compte</h1>
@@ -59,3 +63,9 @@
         <a href="/admin">retour vers la page admin!</a>
     </div>
 </div>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/suspendu.js') }}"></script>
+{% endblock %}

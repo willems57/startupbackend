@@ -1,3 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
 <div class="hero-scene text-center text-white">
     <div class="hero-scene-content">
         <h1>Covoiturage</h1>
@@ -11,3 +15,9 @@
       <div id="alltrajetImages" class="mt-4"></div>
     </div>
 </div>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/trajets.js') }}"></script>
+{% endblock %}

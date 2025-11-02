@@ -16,6 +16,7 @@
     
     {% block stylesheets %}{% endblock %}
 </head>
+{% block body %}
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-primary">
@@ -58,7 +59,7 @@
     </header>
 
     <main id="main-page">
-        {% block body %}{% endblock %}
+       
     </main>
 
     <footer class="bg-primary text-center footer bg-primary">
@@ -81,12 +82,14 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Scripts -->{% block javascripts %}
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/js/script.js') }}"></script>
-        <script type="module" src="{{ asset('assets/js/routes/router.js') }}"></script>
+    <script type="module" src="{{ asset('assets/js/script.js') }}">showAndHideElementsForRoles();</script>
+    <script type="module" src="{{ asset('assets/js/script.js') }}">signout();</script>
+    <script type="module" src="{{ asset('assets/js/routes/router.js') }}"></script>
     
-    {% block javascripts %}{% endblock %}
+    {% endblock %}
 </body>
+ {% endblock %}
 </html>

@@ -1,3 +1,6 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
 
 <div class="hero-scene text-center text-white">
     <div class="hero-scene-content">
@@ -36,3 +39,9 @@
         </div>
     </form>
 </div>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/contact.js') }}"></script>
+{% endblock %}

@@ -1,3 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
 <div class="hero-scene text-center text-white">
     <div class="hero-scene-content">
         <h1>Connexion</h1>
@@ -31,3 +35,9 @@
         <a href="/signup">Vous n’avez pas de compte ? Inscrivez-vous ici !</a>
     </div>
 </div>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/signin.js') }}"></script>
+{% endblock %}

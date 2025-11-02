@@ -1,3 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
 <div class="hero-scene text-center text-white">
   <div class="hero-scene-content">
       <h1>Inscription</h1>
@@ -62,3 +66,8 @@
   </form>
 </div>
 
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/signup.js') }}"></script>
+{% endblock %}

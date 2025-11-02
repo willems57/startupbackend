@@ -1,3 +1,6 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
 <div class="hero-scene text-center text-white">
   <div class="hero-scene-content">
       <p>Bienvenue sur la plateforme Eco Ride</p>
@@ -11,21 +14,16 @@
   </div>
   <div id="alltrajetImages" class="mt-4"></div>
 </div>
-       
-
-
 
 <div class="container">
     <div class="row align-items-center text-center">
-        <divc lass="col">
+        <div class="col">
             <p class="text-justify">
- EcoRide est une plateforme de covoiturage qui permet aux voyagers de  partager et de l'aider a atteindre ses ambitions qui de, 
- réduire l'impact 
-environnemental des déplacements en encourageant le covoiturage, 
-et de devenir la principale plateforme de covoiturage pour les 
-voyageurs en automobile soucieux de l'environnement. Pour cela nous avons notre plateforme anisi que toute notre equipe de proffessionel pret a assister tous ceux qui recherchent une solution économique 
-pour leurs déplacements. 
-
+                EcoRide est une plateforme de covoiturage qui permet aux voyagers de partager et de l'aider a atteindre ses ambitions qui de, 
+                réduire l'impact environnemental des déplacements en encourageant le covoiturage, 
+                et de devenir la principale plateforme de covoiturage pour les 
+                voyageurs en automobile soucieux de l'environnement. Pour cela nous avons notre plateforme anisi que toute notre equipe de proffessionel pret a assister tous ceux qui recherchent une solution économique 
+                pour leurs déplacements. 
             </p>
         </div>
     </div>
@@ -34,24 +32,29 @@ pour leurs déplacements.
 <div class="container">
     <div class="row row-cols-2 row-cols-lg-3">
       <div class="col p-3">
-        <p class="titre-image text-white">Dejeuner exterieur</p>
+        <p class="titre-image text-white">Covoiturage</p>
         <div class="images-card text-white">
-          <img src="../image/csm_Article-Covoiturage_Domicile_Travail-1_1e15c1f901.jpg" class="rounded w-100"/>
+          <img src="{{ asset('assets/images/csm_Article-Covoiturage_Domicile_Travail-1_1e15c1f901.jpg') }}" class="rounded w-100"/>
         </div>
       </div>
   
       <div class="col p-3">
-        <p class="titre-image text-white">Dejeuner exterieur</p>
+        <p class="titre-image text-white">Économique</p>
         <div class="images-card text-white">
-          <img src="../image/images.jpg" class="rounded w-100"/>
+          <img src="{{ asset('assets/images/images.jpg') }}" class="rounded w-100"/>
         </div>
       </div>
   
       <div class="col p-3">
-        <p class="titre-image text-white">Dejeuner exterieur</p>
+        <p class="titre-image text-white">Écologique</p>
         <div class="images-card text-white">
-          <img src="../image/quels-sont-les-avantages-du-covoiturage-ecologique-et-economique-en-france.jpg" class="rounded w-100"/>
+          <img src="{{ asset('assets/images/quels-sont-les-avantages-du-covoiturage-ecologique-et-economique-en-france.jpg') }}" class="rounded w-100"/>
         </div>
+      </div>
     </div>
-  </div>
-  </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/acceuil.js') }}"></script>
+{% endblock %}
